@@ -1,15 +1,13 @@
 import java.util.ArrayList;
 
-public class Room {
+public abstract class Room {
 
     private ArrayList<Guest> guests;
     private int capacity;
-    private boolean free;
 
-    public Room(int capacity) {
+    public Room() {
         this.capacity = capacity;
         this.guests = new ArrayList<Guest>();
-        this.free = free;
     }
 
     public ArrayList<Guest> getGuests() {
@@ -20,18 +18,12 @@ public class Room {
         return capacity;
     }
 
-    public boolean isFree() {
-        if(getNumberOfGuests() == 0) {
-            return true;
-        } return false;
-    }
-
     public int getNumberOfGuests(){
-        return guests.size(); // guest = null
+        return guests.size();
     }
 
     public void checkIn(Guest guest) {
-        if (free && getNumberOfGuests() < capacity){
+        if (getNumberOfGuests() < capacity){
             guests.add(guest);
         }
     }

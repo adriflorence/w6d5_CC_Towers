@@ -2,10 +2,11 @@ public class ConferenceRoom extends Room{
 
     private String roomName;
     private double dailyRate;
+    private int capacity;
 
-    public ConferenceRoom(int capacity) {
-        super(capacity);
-        this.dailyRate = dailyRate;
+    public ConferenceRoom() {
         this.roomName = roomName;
+        this.dailyRate = dailyRate;
+        this.capacity = capacity;
     }
 }
