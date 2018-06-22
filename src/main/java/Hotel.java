@@ -32,11 +32,20 @@ public class Hotel {
                 if (guestRoom.getNumberOfGuests() != 0) {
                     guestList = guestRoom.getGuests();
                 }
-//              return "No guests in this room.";
             }
 
         }
         return guestList;
+    }
+
+    public ArrayList<Room> getFreeRoomList(){
+        ArrayList<Room> freeRoomList = new ArrayList<Room>();
+        for (Room roomToCheck : rooms) {
+            if( roomToCheck.getNumberOfGuests() == 0) {
+                freeRoomList.add(roomToCheck);
+            }
+        }
+        return freeRoomList;
     }
 
 
