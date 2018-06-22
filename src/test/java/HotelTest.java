@@ -51,5 +51,23 @@ public class HotelTest {
         assertEquals(2, diningroom.getNumberOfGuests());
     }
 
+    @Test
+    public void canCheckOut() {
+        hotel.checkIn(guest, conferenceRoom1);
+        hotel.checkIn(guest, conferenceRoom1);
+        hotel.checkOut(guest, conferenceRoom1);
+        hotel.checkIn(guest, bedroom1);
+        hotel.checkOut(guest, bedroom1);
+        hotel.checkIn(guest, conferenceRoom2);
+        hotel.checkIn(guest, conferenceRoom2);
+        hotel.checkOut(guest, conferenceRoom2);
+        hotel.checkOut(guest, conferenceRoom2);
+        hotel.checkIn(guest, diningroom);
+        hotel.checkOut(guest, diningroom);
 
+        assertEquals(1, conferenceRoom1.getNumberOfGuests());
+        assertEquals(0, bedroom1.getNumberOfGuests());
+        assertEquals(0, conferenceRoom2.getNumberOfGuests());
+        assertEquals(0, diningroom.getNumberOfGuests());
+    }
 }

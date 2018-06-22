@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38645d95-1c00-42a0-83fa-8dc778f95b9b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BedRoom.java" afterPath="$PROJECT_DIR$/src/main/java/BedRoom.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ConferenceRoom.java" afterPath="$PROJECT_DIR$/src/main/java/ConferenceRoom.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiningRoom.java" afterPath="$PROJECT_DIR$/src/main/java/DiningRoom.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hotel.java" afterPath="$PROJECT_DIR$/src/main/java/Hotel.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" afterPath="$PROJECT_DIR$/src/main/java/Room.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BedRoom.class" afterPath="$PROJECT_DIR$/target/classes/BedRoom.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ConferenceRoom.class" afterPath="$PROJECT_DIR$/target/classes/ConferenceRoom.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DiningRoom.class" afterPath="$PROJECT_DIR$/target/classes/DiningRoom.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Hotel.class" afterPath="$PROJECT_DIR$/target/classes/Hotel.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" afterPath="$PROJECT_DIR$/target/classes/Room.class" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HotelTest.java" afterPath="$PROJECT_DIR$/src/test/java/HotelTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -88,8 +78,8 @@
       <file leaf-file-name="HotelTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/HotelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="339">
+              <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -284,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HotelTest.canCheckIn">
+  <component name="RunManager" selected="JUnit.HotelTest.canCheckOut">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -475,8 +465,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HotelTest.canCheckIn" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HotelTest.canCheckOut" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HotelTest.canCheckOut" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HotelTest.canCheckIn" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.BedRoomTest.cannotCheckInGuestBeyondCapacity" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.BedRoomTest.hasCapacity" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.BedRoomTest.canCheckInGuest" />
@@ -500,12 +490,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BedRoomTest_hasCapacity - 2018.06.22 at 00h 03m 25s.xml">
-      <configuration name="BedRoomTest.hasCapacity" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedRoomTest_hasCapacity - 2018.06.22 at 00h 26m 06s.xml">
-      <configuration name="BedRoomTest.hasCapacity" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BedRoomTest_isAvailable - 2018.06.22 at 00h 03m 54s.xml">
       <configuration name="BedRoomTest.isAvailable" configurationId="JUnit" />
     </history-entry>
@@ -530,6 +514,12 @@
     <history-entry file="HotelTest_canCheckOut - 2018.06.22 at 11h 04m 40s.xml">
       <configuration name="HotelTest.canCheckOut" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HotelTest_canCheckOut - 2018.06.22 at 11h 17m 53s.xml">
+      <configuration name="HotelTest.canCheckOut" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HotelTest_canCheckOut - 2018.06.22 at 11h 18m 22s.xml">
+      <configuration name="HotelTest.canCheckOut" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="25" width="1114" height="709" extended-state="0" />
@@ -544,7 +534,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -957,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/HotelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="339">
+          <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
