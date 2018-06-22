@@ -70,4 +70,15 @@ public class HotelTest {
         assertEquals(0, conferenceRoom2.getNumberOfGuests());
         assertEquals(0, diningroom.getNumberOfGuests());
     }
+
+    @Test
+    public void canGetGuestList() {
+        hotel.checkIn(guest, conferenceRoom1);
+        hotel.checkIn(guest, conferenceRoom1);
+        ArrayList<Guest> expected = new ArrayList<Guest>() {{
+            add(guest);
+            add(guest);
+        }};
+        assertEquals(expected, hotel.getGuestList(conferenceRoom1));
+    }
 }

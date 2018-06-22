@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Hotel {
 
     private ArrayList<Room> rooms;
+    private ArrayList<Guest> guests;
 
     public Hotel(ArrayList<Room> rooms) {
         this.rooms = rooms;
@@ -23,5 +24,20 @@ public class Hotel {
             }
         }
     }
+
+    public ArrayList<Guest> getGuestList(Room room){
+        ArrayList<Guest> guestList = new ArrayList<Guest>();
+        for (Room guestRoom : rooms) {
+            if (room == guestRoom) {
+                if (guestRoom.getNumberOfGuests() != 0) {
+                    guestList = guestRoom.getGuests();
+                }
+//              return "No guests in this room.";
+            }
+
+        }
+        return guestList;
+    }
+
 
 }
