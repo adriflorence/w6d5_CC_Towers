@@ -16,8 +16,8 @@ public class HotelTest {
     @Before
     public void setUp() throws Exception {
         guest = new Guest();
-        bedroom1 = new BedRoom (1, BedRoomType.SINGLE, 30.50);
-        bedroom2 = new BedRoom (2, BedRoomType.DOUBLE, 50.50);
+        bedroom1 = new BedRoom (1, BedRoomType.SINGLE, 30.50,3);
+        bedroom2 = new BedRoom (2, BedRoomType.DOUBLE, 50.50, 3);
         diningroom = new DiningRoom(50, "Restaurant");
         conferenceRoom1 = new ConferenceRoom(100, "Large Meeting Room", 300);
         conferenceRoom2 = new ConferenceRoom(20, "Small Meeting Room", 50);
@@ -37,8 +37,8 @@ public class HotelTest {
         hotel.checkIn(guest, conferenceRoom1);
         hotel.checkIn(guest, conferenceRoom1);
         hotel.checkIn(guest, conferenceRoom1);
-        hotel.checkIn(guest, bedroom1);
-        hotel.checkIn(guest, bedroom1);
+        hotel.checkInToBedroom(guest, bedroom1, 3);
+        hotel.checkInToBedroom(guest, bedroom1, 3);
         hotel.checkIn(guest, conferenceRoom2);
         hotel.checkIn(guest, conferenceRoom2);
         hotel.checkIn(guest, conferenceRoom2);
@@ -56,7 +56,7 @@ public class HotelTest {
         hotel.checkIn(guest, conferenceRoom1);
         hotel.checkIn(guest, conferenceRoom1);
         hotel.checkOut(guest, conferenceRoom1);
-        hotel.checkIn(guest, bedroom1);
+        hotel.checkInToBedroom(guest, bedroom1, 2);
         hotel.checkOut(guest, bedroom1);
         hotel.checkIn(guest, conferenceRoom2);
         hotel.checkIn(guest, conferenceRoom2);
@@ -83,9 +83,9 @@ public class HotelTest {
     }
 
     @Test
-    public void canGetFreeRooms() { // ALL ROOMS!
+    public void canGetFreeRooms() { // ALL FREE ROOMS!
         hotel.checkIn(guest, conferenceRoom1);
-        hotel.checkIn(guest, bedroom1);
+        hotel.checkInToBedroom(guest, bedroom1, 1);
 //        bedroom2, diningroom, conferenceRoom2 should be free
         ArrayList<Room> expected = new ArrayList<Room>() {{
             add(bedroom2);
@@ -102,5 +102,14 @@ public class HotelTest {
             add(bedroom2);
         }};
         assertEquals(expected, hotel.getAllBedrooms());
+    }
+
+    @Test
+    public void canGetFreeBedrooms() { // FREE BEDROOMS ONLY!
+        hotel.checkInToBedroom(guest, bedroom1, 2);
+        ArrayList<Room> expected = new ArrayList<Room>() {{
+            add(bedroom2);
+        }};
+        assertEquals(expected, hotel.getFreeBedroomList());
     }
 }
