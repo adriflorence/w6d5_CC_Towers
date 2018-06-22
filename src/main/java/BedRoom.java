@@ -11,7 +11,6 @@ public class BedRoom extends Room {
         this.type = type;
         this.nightlyRate = nightlyRate;
         this.availableNights = availableNights;
-
     }
 
     public int getRoomNumber() {
