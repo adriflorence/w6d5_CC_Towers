@@ -83,7 +83,7 @@ public class HotelTest {
     }
 
     @Test
-    public void canGetFreeRooms() {
+    public void canGetFreeRooms() { // ALL ROOMS!
         hotel.checkIn(guest, conferenceRoom1);
         hotel.checkIn(guest, bedroom1);
 //        bedroom2, diningroom, conferenceRoom2 should be free
@@ -93,5 +93,14 @@ public class HotelTest {
             add(conferenceRoom2);
         }};
         assertEquals(expected, hotel.getFreeRoomList());
+    }
+
+    @Test
+    public void canGetAllBedrooms() { // BEDROOMS ONLY!
+        ArrayList<Room> expected = new ArrayList<Room>() {{
+            add(bedroom1);
+            add(bedroom2);
+        }};
+        assertEquals(expected, hotel.getAllBedrooms());
     }
 }

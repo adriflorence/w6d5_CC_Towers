@@ -48,5 +48,14 @@ public class Hotel {
         return freeRoomList;
     }
 
+    public ArrayList<Room> getAllBedrooms(){
+        ArrayList<Room> bedroomList = new ArrayList<Room>();
+        for (Room roomToCheck : rooms) {
+            if( roomToCheck instanceof BedRoom) {
+                bedroomList.add(roomToCheck);
+            }
+        }
+        return bedroomList;
+    }
 
 }
