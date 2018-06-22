@@ -5,7 +5,7 @@ public abstract class Room {
     private ArrayList<Guest> guests;
     private int capacity;
 
-    public Room() {
+    public Room(int capacity) {
         this.capacity = capacity;
         this.guests = new ArrayList<Guest>();
     }
@@ -26,5 +26,14 @@ public abstract class Room {
         if (getNumberOfGuests() < capacity){
             guests.add(guest);
         }
+    }
+
+    public void checkOut(Guest guest) {
+        for (Guest checkedInGuest : guests){
+            if (checkedInGuest == guest) {
+                checkedInGuest = guest;
+            }
+        }
+        guests.remove(guest);
     }
 }
